@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://drive.etzhayyim.com",
+  "name": "etzhayyim-project-drive",
+  "description": "Google Drive v3 + Microsoft Graph (OneDrive) compatible drive API over kotoba datomic (graph drive-v1). Second vertical of the workspace-compat program (ADR-2606010500).",
+  "url": "https://drive.etzhayyim.com",
+  "applicationCategory": "Productivity",
+  "operatingSystem": "Kubernetes",
+  "author": { "@type": "Organization", "name": "etzhayyim", "url": "https://etzhayyim.com" },
+  "softwareVersion": "0.1.0",
+  "component": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "lg-drive",
+      "description": "LangGraph + FastAPI XRPC server exposing ai.etzhayyim.apps.drive.* over kotoba datomic.",
+      "applicationCategory": "Backend",
+      "programmingLanguage": "Python",
+      "runtimePlatform": "Vultr k8s LangServer pod (mitama-udf/lg-drive:8000)"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "drive-compat",
+      "description": "Cloudflare Worker edge serving Google Drive v3 (/drive/v3) and Microsoft Graph OneDrive (/v1.0/me/drive) REST skins, translating to canonical XRPC.",
+      "applicationCategory": "Edge",
+      "programmingLanguage": "TypeScript",
+      "runtimePlatform": "Cloudflare Worker (drive.etzhayyim.com)"
+    }
+  ],
+  "isBasedOn": "90-docs/adr/2606010500-workspace-compat-datomic-schema.md"
+}

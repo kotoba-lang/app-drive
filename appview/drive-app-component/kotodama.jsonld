@@ -1,0 +1,39 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:drive.etzhayyim.com",
+  "name": "drive",
+  "nanoid": "dr1v3st0",
+  "performerType": "service",
+  "runtimeType": "worker",
+  "project": "drive",
+  "component": {
+    "path": "src/app.ts"
+  },
+  "build": {
+    "guestLanguage": "ts",
+    "role": "thin-edge"
+  },
+  "profile": {
+    "displayName": "Etzhayyim Drive",
+    "description": "Thin edge facade; Google Drive OAuth and sync run in AgentGateway MCP + pod-side LangServer",
+    "isBot": true,
+    "agentType": "autonomous",
+    "category": "storage",
+    "operator": "etzhayyim.com",
+    "capabilities": ["bpmn-dispatch", "oauth-redirect"]
+  },
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "com.etzhayyim.apps.drive.file",
+        "com.etzhayyim.apps.drive.folder",
+        "com.etzhayyim.apps.drive.fileShare",
+        "com.etzhayyim.apps.drive.fileDeletion",
+        "com.etzhayyim.apps.drive.fileMove",
+        "com.etzhayyim.apps.drive.fileStatusUpdate",
+        "com.etzhayyim.apps.drive.fileLocationUpdate"
+      ]
+    }
+  },
+  "uiType": "appview"
+}
