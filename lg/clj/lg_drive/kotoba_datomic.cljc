@@ -6,7 +6,7 @@
   Endpoint = KOTOBA_XRPC_URL|KOTOBA_URL (default in-cluster service); auth =
   Bearer JWT (KOTOBA_BEARER)."
   (:require [cheshire.core :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-drive.edn :as edn])
   (:import [java.security MessageDigest]))
 
@@ -33,7 +33,7 @@
   [^bytes payload]
   (let [digest (.digest (MessageDigest/getInstance "SHA-256") payload)
         cid (byte-array (concat (map unchecked-byte [0x01 0x71 0x12 0x20]) (seq digest)))]
-    (str "b" (str/lower-case (base32-nopad cid)))))
+    (str "b" (str/lower (base32-nopad cid)))))
 
 (defn graph-cid-for-label
   "Stable kotoba graph CID from a human-readable label (multibase passthrough)."

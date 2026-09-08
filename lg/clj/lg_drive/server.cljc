@@ -17,7 +17,7 @@
   kotoba datomic (graph `drive-v1`). `route` is a pure dispatch fn (store, request)
   so the routing is unit-testable without binding a socket."
   (:require [cheshire.core :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-drive.handlers :as h]
             [lg-drive.kotoba-datomic :as kd]
             [lg-drive.store :as store])

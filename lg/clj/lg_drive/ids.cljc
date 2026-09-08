@@ -4,7 +4,7 @@
   Canonical entity id = `drive:file:{slug}` (the datomic entity ref).
   Path-based DID    = `did:web:drive.etzhayyim.com:file:{slug}`.
   AT URI            = `at://{did}/ai.etzhayyim.apps.drive.file/{slug}`."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def ^:private slug-alphabet "0123456789abcdefghijklmnopqrstuvwxyz")
 (def ^:private domain "drive.etzhayyim.com")
