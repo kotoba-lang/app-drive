@@ -9,7 +9,7 @@
   [:db.fn/retractEntity ..]), so the handlers are storage-agnostic. The Python
   store was async (httpx); babashka.http-client is synchronous, so this twin is
   synchronous — the handler topology is unchanged."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-drive.edn :as edn]
             [lg-drive.ids :as ids]
             [lg-drive.kotoba-datomic :as kd]))

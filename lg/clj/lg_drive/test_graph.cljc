@@ -3,7 +3,7 @@
   Verifies the health graph compiles + invokes (START→probe→END) and the pure
   `route` dispatch over the FakeDriveStore (health + xrpc create/get + auth)."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [langgraph.graph :as g]
             [lg-drive.graphs.health :as health]
             [lg-drive.server :as server]

@@ -7,7 +7,7 @@
   kotoba-server's `kotoba_edn::parse` understands. This ns therefore keeps the
   Python module's public surface (`tx-add` / `tx-retract` / `tx-retract-entity` /
   `encode` / `encode-tx-data` / `parse-edn-value`) as thin, faithful wrappers."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── encode (Python `encode`) ─────────────────────────────────────────────────
 ;; `pr-str` is a total EDN encoder for the value subset calendar/drive use

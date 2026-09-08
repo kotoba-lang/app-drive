@@ -6,7 +6,7 @@
   SSoT for behavior (concurrency, not-found, pagination, the change feed). Binary
   content is NOT handled here — `:drive/sha256` links metadata→blob. Maps are
   wire-shaped (STRING keys); attr maps are `:drive/*` (keyword keys)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-drive.ids :as ids]
             [lg-drive.mapping :as mapping]
             [lg-drive.edn :as edn]
@@ -82,7 +82,7 @@
 (defn files-list [st params]
   (let [parent-id (get params "parentId")
         q (get params "q")
-        include-trashed (= "true" (str/lower-case (str (get params "includeTrashed" "false"))))
+        include-trashed (= "true" (str/lower (str (get params "includeTrashed" "false"))))
         order-by (get params "orderBy" "name")
         offset (->int (get params "offset") 0)
         limit (->int (get params "limit") 100)
@@ -91,8 +91,8 @@
                 (and (or (nil? parent-id) (= (get f "parentId" "root") parent-id))
                      (or include-trashed (not (get f "trashed")))
                      (or (nil? q)
-                         (let [nm (str/lower-case (or (get f "name") ""))
-                               ql (str/lower-case q)]
+                         (let [nm (str/lower (or (get f "name") ""))
+                               ql (str/lower q)]
                            (or (= ql nm) (str/starts-with? nm ql))))))
         filtered (filterv keep? files)
         k (get {"updatedAtMs" "updatedAtMs" "sizeBytes" "sizeBytes"} order-by "name")
