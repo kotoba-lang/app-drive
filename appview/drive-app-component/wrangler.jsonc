@@ -1,13 +1,13 @@
 {
   "name": "kotodama-dr1v3st0",
-  "main": "svelte/.svelte-kit/cloudflare/_worker.js",
+  "main": "src/app.ts",
   "compatibility_date": "2025-03-17",
   "compatibility_flags": [
     "nodejs_compat",
     "nodejs_als"
   ],
   "assets": {
-    "directory": "./svelte/.svelte-kit/cloudflare/client",
+    "directory": "./cljs/public",
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "single-page-application"
@@ -17,7 +17,7 @@
     "APP_DESCRIPTION": "Thin edge facade; Google Drive OAuth and sync run in BPMN + Zeebe Python",
     "APP_DISPLAY_NAME": "etzhayyim Drive",
     "APP_EMBED_URL": "https://dr1v3st0.etzhayyim.com/?embed=1",
-    "APP_FRAMEWORK": "sveltekit-edge-bff",
+    "APP_FRAMEWORK": "cljs-reagent-re-frame-jp-go-dds",
     "AGENTGATEWAY_MCP_ROUTER_URL": "https://mcp.etzhayyim.com/xrpc/com.etzhayyim.mcp.message",
     "APP_NANOID": "dr1v3st0",
     "APP_PERFORMER_TYPE": "service",
