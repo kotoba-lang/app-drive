@@ -56,6 +56,6 @@ lg/  (bb.edn, run_tests.clj)   # canonical = the clj twin (ADR-2606280030); DEV-
 
 ## Test
 ```bash
-cd 60-apps/etzhayyim-project-drive/lg && bb run_tests.clj
+cd 60-apps/etzhayyim-project-drive/lg && kbb run_tests.cljk
 cd 50-infra/cloudflare/workers/drive-compat && node --test test/*.test.ts
 ```

@@ -1,7 +1,7 @@
 ;; lg-drive — app-scoped bb.edn for the Clojure port (ADR-2606280030).
 ;; Mirrors the repo-root langgraph-clj / langchain-clj git coordinates so the
 ;; clj twin is portable (loads under bb from this dir without touching repo-root
-;; bb.edn). `bb run_tests.clj` runs the ported clojure.test suites; `bb serve`
+;; bb.edn). `kbb run_tests.cljk` runs the ported clojure.test suites; `kbb -M:serve`
 ;; starts the httpkit XRPC server (kotoba-backed).
 {:paths ["clj"]
  :deps {com-junkawasaki/langchain-clj
