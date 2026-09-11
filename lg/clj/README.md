@@ -34,7 +34,7 @@ this deletion.
   `babashka.http-client` is synchronous, so the store/handlers are synchronous.
   The graph topology and external behavior are unchanged.
 - **Server.** FastAPI decorators → a single pure `route` fn + a babashka-httpkit
-  ring adapter (`-main` / `bb serve`). Same 8 routes, same `x-api-key` enforcement.
+  ring adapter (`-main` / `kbb -M:serve`). Same 8 routes, same `x-api-key` enforcement.
 - **Wire vs attr keys.** Wire/JSON `file` maps keep STRING keys (faithful to the
   JSON surface + the Python tests); `:drive/*` attr maps use keyword keys.
 
@@ -42,6 +42,6 @@ this deletion.
 
 ```bash
 cd 60-apps/etzhayyim-project-drive/lg
-bb run_tests.clj      # 13 tests / 38 assertions (8 ported handler + 5 graph/server)
-bb serve              # httpkit XRPC server on :8000 (PORT overrides), kotoba-backed
+kbb run_tests.cljk      # 13 tests / 38 assertions (8 ported handler + 5 graph/server)
+kbb -M:serve              # httpkit XRPC server on :8000 (PORT overrides), kotoba-backed
 ```
