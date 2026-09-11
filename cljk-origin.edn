@@ -1,0 +1,18 @@
+{:format :kotoba.cljk-origin/v1
+ :renamed-on "2026-09-11"
+ :decision "adr-2609111500-cljk-rename-all-clojure-source (com-junkawasaki/root 90-docs/adr; owner instruction 2026-09-11)"
+ :rule "value = the extension the file had before the rename. A path ending in .clj.cljk or .cljs.cljk kept it in the name because both platform files existed (or the plain target was taken)."
+ :origins
+ {"appview/drive-app-component/cljs/src/drive/app.cljk" ".cljs"
+  "appview/drive-app-component/cljs/test/drive/app_test.cljk" ".cljs"
+  "lg/clj/lg_drive/edn.cljk" ".cljc"
+  "lg/clj/lg_drive/graphs/health.cljk" ".cljc"
+  "lg/clj/lg_drive/handlers.cljk" ".cljc"
+  "lg/clj/lg_drive/ids.cljk" ".cljc"
+  "lg/clj/lg_drive/kotoba_datomic.cljk" ".cljc"
+  "lg/clj/lg_drive/mapping.cljk" ".cljc"
+  "lg/clj/lg_drive/server.cljk" ".cljc"
+  "lg/clj/lg_drive/store.cljk" ".cljc"
+  "lg/clj/lg_drive/test_graph.cljk" ".cljc"
+  "lg/clj/lg_drive/test_handlers.cljk" ".cljc"
+  "lg/run_tests.cljk" ".clj"}}
