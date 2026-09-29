@@ -1,7 +1,7 @@
 #!/usr/bin/env kbb
 ;; lg-drive — bb-native test runner (Clojure / babashka; no shell). ADR-2606280030.
 ;;
-;; Per the repo-wide rule (root CLAUDE.md §"Operational code = clj/bb"): first-party
+;; Per the repo-wide rule (root AGENTS.md §"Operational code = clj/bb"): first-party
 ;; tooling is clj/bb, NOT shell. This is the clj twin of `python3 -m pytest tests/`.
 ;;
 ;;   cd 60-apps/etzhayyim-project-drive/lg && kbb run_tests.cljk
