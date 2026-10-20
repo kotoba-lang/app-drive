@@ -1,0 +1,18 @@
+;; app-drive — itonami（dapp）の aiueos アプリ記述子（notes.edn 形）。
+;; 判定コアは aiueos/drive_trash.cljk（一覧可視性・更新競合・patch 白名单）。
+;; 正本は lg/clj/lg_drive/handlers.cljk（storage-agnostic、SSoT）。pure（:effects #{}）。
+{:aiueos/component :app/drive-trash
+ :aiueos/kind :app
+ :aiueos/trust :untrusted
+ :aiueos/source "drive_trash.cljk"
+ :aiueos/wasm "drive_trash.wasm"
+ :aiueos/entry "main"
+ :aiueos/args []
+ :aiueos/imports #{}
+ :aiueos/exports #{:app/main
+                   :app/list-judgment
+                   :app/update-judgment
+                   :app/patch-field-ok
+                   :app/patch-admissible}
+ :aiueos/effects #{}
+ :aiueos/limits {:memory-pages 16 :fuel 5000000}}
